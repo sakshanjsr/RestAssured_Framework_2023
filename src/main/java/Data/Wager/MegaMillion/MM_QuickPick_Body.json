@@ -1,0 +1,19 @@
+{
+	"boardSpecs": [{
+			"numberOfSelections": 5,
+			"rangeMin": 1,
+			"rangeMax": 70,
+			"withReplacement": false,
+			"rangeExclusions": [],
+			"numberOfBoards": 1
+		},
+		{
+			"numberOfSelections": 1,
+			"rangeMin": 1,
+			"rangeMax": 25,
+			"rangeExclusions": [],
+			"numberOfBoards": 1,
+			"withReplacement": false
+		}
+	]
+}

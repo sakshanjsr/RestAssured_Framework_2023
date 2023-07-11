@@ -1,0 +1,10 @@
+{
+	"x-esa-api-key": "${AWC_API_KEY}",
+	"Referer": "https://refqa2playdigital.dev.igt.com",
+	"Accept-Language": "en-US,en;q=0.5",
+	"Origin": "https://refqa2playdigital.dev.igt.com",
+	"Accept": "application/json",
+	"Content-Type": "application/json",
+	"Accept-Encoding": "gzip, deflate, br",
+	"Authorization": "OAuth %{oauthtoken}"
+}
