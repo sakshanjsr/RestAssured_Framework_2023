@@ -8,16 +8,11 @@ import io.cucumber.testng.CucumberOptions;
 		features = "src/test/resources/Features",
 		glue = {"stepdefs"},
 		plugin = {"pretty" , "html:target/cucumber-report.html"},
-		tags = "@Regression",
+		tags = "@Smoke",
 		monochrome = true
 	)
 
 
 public class TestRunner extends AbstractTestNGCucumberTests{
 
-//	  @DataProvider(parallel = true)
-//	    @Override
-//	    public Object[][] scenarios() {
-//	        return super.scenarios();
-//	    }
 }

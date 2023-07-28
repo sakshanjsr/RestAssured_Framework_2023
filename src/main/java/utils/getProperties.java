@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class getProperties {
 	
-	public static String environment = "D2";
+	public static String environment = "Q1";
 	
 	public static Properties globalPorperties() throws IOException {
 		Properties prop = new Properties();
