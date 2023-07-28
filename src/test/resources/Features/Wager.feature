@@ -13,7 +13,7 @@ Feature: Place Wagers for different games
     And User gets the current account balance
     When User gets the "<GameName>" QuickPick
     Then Place PICK3 Wager
-    And 
+     
 
     Examples: 
       | GameName    |

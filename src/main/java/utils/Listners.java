@@ -52,7 +52,6 @@ public class Listners implements ITestListener {
 		String fileName = ExtentReporterNG.getReportNameWithTimestamp();
 		String fullReportPath = System.getProperty("user.dir") + "\\Results\\" +fileName; 
 		extent = ExtentReporterNG.getReportObject(fullReportPath, "Saket API Automation" , "API Automation");
-		
 	}
 	@Override
 	public void onFinish(ITestContext context) {

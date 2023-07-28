@@ -39,8 +39,8 @@ public class Rest_Utils {
 		ExtentReporterNG.logInfo(response.getBody().prettyPrint());
 	}
 	
+	
 	public static Response performPost (String baseURL, JSONObject payLoad , HashMap<String, String> headers ,String path) {
-		
 		RequestSpecification requestSpecifications = getRequestSpecification( baseURL,  payLoad , headers);
 		Response response = requestSpecifications.post(path);
 		printRequestLogInReport(requestSpecifications);
@@ -48,8 +48,8 @@ public class Rest_Utils {
 		return response;
 	}
 	
+	
 	public static Response performGet (String baseURL, JSONObject payLoad , HashMap<String, String> headers ,String path) {
-		
 		RequestSpecification requestSpecifications = getRequestSpecification( baseURL,  payLoad , headers);
 		Response response = requestSpecifications.get(path);
 		printRequestLogInReport(requestSpecifications);
@@ -58,7 +58,6 @@ public class Rest_Utils {
 	}
 
 	public static Response performPut (String baseURL, JSONObject payLoad , HashMap<String, String> headers ,String path) {
-		
 		RequestSpecification requestSpecifications = getRequestSpecification( baseURL,  payLoad , headers);
 		Response response = requestSpecifications.put(path);
 		printRequestLogInReport(requestSpecifications);
