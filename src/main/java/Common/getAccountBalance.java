@@ -20,7 +20,7 @@ public class getAccountBalance {
 			return hm;
 			}
 		
-		@Test
+	
 		public static int getAccountBalanceOfPlayer(String token) {
 			RestAssured.baseURI="https://cmdsecgateway-rnd-lot-cmd-d2-northeurope.igtilotterycmdtest.com/";
 			String accountDetails = 

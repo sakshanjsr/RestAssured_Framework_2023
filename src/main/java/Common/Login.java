@@ -8,10 +8,13 @@ import org.json.simple.parser.ParseException;
 import org.testng.annotations.Test;
 
 import Data.Login.loginData;
+import io.restassured.http.Header;
+import io.restassured.http.Headers;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import utils.Rest_Utils;
+import utils.assertResponses;
 import utils.getProperties;
 
 
@@ -30,7 +33,7 @@ public class Login {
 		
 		Response Response = 
 		Rest_Utils.performPost(baseURL , loginData.loginBodyFromJSON(), loginData.loginHeadersFromJSON() , oAuth_LOGIN);
-
+                              // uri          payload                          header                     path parameter
 
 		
 		//JsonPath js = new JsonPath(Response);
@@ -39,6 +42,10 @@ public class Login {
 		JsonPath jp = new JsonPath(body);
 		String token = jp.getString("token[1]");
 	    
+		assertResponses.verifyStatusCode(Response.statusCode() , loginData.expectedResponsesFromJSON());
+		assertResponses.verifyResponseTime(Response.time() , loginData.expectedResponsesFromJSON());
+		assertResponses.verifyHeaders(Response.headers() , loginData.expectedResponsesFromJSON());
+		assertResponses.verifyResponseBody(Response.body().toString(), loginData.expectedResponsesFromJSON());
 		return token;
 	}
 

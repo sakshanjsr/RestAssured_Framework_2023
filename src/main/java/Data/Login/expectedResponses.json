@@ -1,0 +1,38 @@
+{
+
+	"headers":{
+		"Headers" : "Transfer-Encoding=chunked",
+		"Content-Type" : "application/json",
+		"Strict-Transport-Security" : "max-age=15724800; includeSubDomains",
+		"X-Cache" : "CONFIG_NOCACHE"
+		},
+	
+	"statusCode" : "200",
+	
+	"responseTime" : "5000",
+	
+	"body":{
+	
+		  "generatorId": "aw-random-helm-7fb6b6d7b4-9kblh-16988",
+		  "timeStamp": 1690898813450,
+		  "boardSpecs": [
+		    {
+		      "numberOfBoards": 1,
+		      "numberOfSelections": 2,
+		      "rangeMin": 0,
+		      "rangeMax": 9,
+		      "withReplacement": true,
+		      "rangeExclusions": [
+		
+		      ],
+		      "boards": [
+		        [
+		          0,
+		          2
+		        ]
+		      ]
+		    }
+		  ]
+
+	}
+}

@@ -27,9 +27,7 @@ public class loginData {
 	
 	
 	
-	public static HashMap<String, String> loginHeadersFromJSON() throws IOException, ParseException {
-
-	       
+	public static HashMap<String, String> loginHeadersFromJSON() throws IOException, ParseException { 
 	       FileReader reader = new FileReader(System.getProperty("user.dir")+"\\src\\main\\java\\Data\\Login\\loginHeaders.json");
 	       Object obj = parser.parse(reader);
 	       JSONObject jObject = (JSONObject)obj;
@@ -41,14 +39,19 @@ public class loginData {
 	
     
 	public static JSONObject loginBodyFromJSON() throws IOException, ParseException {
-
 		   java.io.FileReader reader = new java.io.FileReader(System.getProperty("user.dir")+"\\src\\main\\java\\Data\\Login\\loginBody.json");
 	       Object obj = parser.parse(reader);
 	       JSONObject jObject = (JSONObject)obj;
-	       
 	       return jObject;
 	}
 	
+	
+	public static JSONObject expectedResponsesFromJSON() throws IOException, ParseException {
+		   java.io.FileReader reader = new java.io.FileReader(System.getProperty("user.dir")+"\\src\\main\\java\\Data\\Login\\expectedResponses.json");
+	       Object obj = parser.parse(reader);
+	       JSONObject jObject = (JSONObject)obj;
+	       return jObject;	     
+	}
 	
 	
 }

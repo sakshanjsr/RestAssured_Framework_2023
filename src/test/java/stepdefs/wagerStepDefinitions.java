@@ -3,6 +3,7 @@ package stepdefs;
 import java.io.IOException;
 
 import org.json.simple.parser.ParseException;
+import org.testng.annotations.Test;
 
 import Common.Login;
 import Common.getAccountBalance;
@@ -15,6 +16,7 @@ import io.cucumber.java.en.When;
 public class wagerStepDefinitions {
 
 	private String token;
+	
 
 	@Given("User is logged into the Application")
 	public void user_is_logged_into_the_application() throws IOException, ParseException {
@@ -28,11 +30,6 @@ public class wagerStepDefinitions {
 		getAccountBalance.getAccountBalanceOfPlayer(token);
 	}
 
-	@When("User gets the QuickPick")
-	public void user_gets_the_quick_pick() throws IOException, ParseException {
-	    // Write code here that turns the phrase above into concrete actions
-		quickPick.getQuickPick("Pick3", token);
-	}
 	
 	@When("User gets the {string} QuickPick")
 	public void user_gets_the_quick_pick(String gameName) throws IOException, ParseException {
