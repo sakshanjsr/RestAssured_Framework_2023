@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6b655b4-dfff-4b57-aaf1-5e516afdcdbc" name="Changes" comment="" />
+    <list default="true" id="d6b655b4-dfff-4b57-aaf1-5e516afdcdbc" name="Changes" comment="commit from develop 21:40 on 8th Aug">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,16 +30,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop__2&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sanjay Prasad/eclipse-workspace/RestAssured_Frame_Final&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Sanjay Prasad/eclipse-workspace/RestAssured_Frame_Final"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="TestNG.C:/Users/Sanjay Prasad/eclipse-workspace/RestAssured_Frame_Final/Smoke_testng.xml">
+    <configuration name="C:/Users/Sanjay Prasad/eclipse-workspace/RestAssured_Frame_Final/Smoke_testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ResrAssured_Apple" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/Smoke_testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/Sanjay Prasad/eclipse-workspace/RestAssured_Frame_Final/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ResrAssured_Frame_Final" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
@@ -48,6 +62,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/Sanjay Prasad/eclipse-workspace/RestAssured_Frame_Final/Smoke_testng.xml" />
         <item itemvalue="TestNG.C:/Users/Sanjay Prasad/eclipse-workspace/RestAssured_Frame_Final/testng.xml" />
         <item itemvalue="TestNG.C:/Users/Sanjay Prasad/eclipse-workspace/RestAssured_Frame_Final/testng.xml" />
       </list>
@@ -63,5 +78,9 @@
       <updated>1691485476690</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit from develop 21:40 on 8th Aug" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit from develop 21:40 on 8th Aug" />
   </component>
 </project>
