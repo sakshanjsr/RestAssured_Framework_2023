@@ -41,7 +41,7 @@ public class Login {
 		System.out.println("Body : "+body);
 		JsonPath jp = new JsonPath(body);
 		String token = jp.getString("token[1]");
-	    
+
 		assertResponses.verifyStatusCode(Response.statusCode() , loginData.expectedResponsesFromJSON());
 		assertResponses.verifyResponseTime(Response.time() , loginData.expectedResponsesFromJSON());
 		assertResponses.verifyHeaders(Response.headers() , loginData.expectedResponsesFromJSON());
