@@ -10,8 +10,5 @@
         <module name="ResrAssured_Apple" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ResrAssured_Apple" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
