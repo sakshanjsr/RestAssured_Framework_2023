@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Common.getResponse">
+      <class name="stepdefs.wagerStepDefinitions">
         <methods>
-          <include name="getApiResponse"/>
+          <include name="user_is_logged_into_the_application"/>
         </methods>
-      </class> <!-- Common.getResponse -->
+      </class> <!-- stepdefs.wagerStepDefinitions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
