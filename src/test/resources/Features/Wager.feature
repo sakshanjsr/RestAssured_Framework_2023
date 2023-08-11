@@ -1,4 +1,4 @@
-Feature: Place Wagers for different games
+Feature: Place Wagers for different games Allure
 
   @Smoke
   Scenario: Place PICK3 Wager
