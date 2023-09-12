@@ -11,8 +11,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		features = "src/test/resources/Features",
 		glue = {"stepdefs"},
-		plugin = {"pretty" , "html:target/cucumber-report.html" , "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-		tags = "@Regression",
+		plugin = {"pretty" , "html:target/cucumber-report.html" , "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" , "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
+		tags = "@Smoke",
 		monochrome = true
 	)
 

@@ -1,22 +1,25 @@
 package utils;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
 import java.util.HashMap;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
-import com.google.common.collect.Multiset.Entry;
+
 import com.google.gson.Gson;
 
 import Data.Login.loginData;
+import io.qameta.allure.Step;
 import io.restassured.http.*;
 import io.restassured.path.json.JsonPath;
 
 public class assertResponses {
 	
 
-	
+	@Step
 	public static void verifyHeaders(Headers responseHeaders , JSONObject expectedResponseData) throws IOException, ParseException {
 		
 		//JsonPath jp = new JsonPath(expectedResponseData.toString());
@@ -50,10 +53,11 @@ public class assertResponses {
 		
 	}
 	
-	
+	@Step
 	public static void verifyStatusCode(int actualStatusCode , JSONObject expectedResponseData) {
 		JsonPath jp = new JsonPath(expectedResponseData.toString());
 		int expecteStatusCode = Integer.parseInt(jp.getString("statusCode"));
+		System.out.println("expecteStatusCode : "+expecteStatusCode);
 		
 		if(actualStatusCode == expecteStatusCode) {
 			ExtentReporterNG.logPassDetails("Status Code Matched : "+"\n Actual Status Code : "+actualStatusCode +"\n Expected Status Code : "+expecteStatusCode);
@@ -61,9 +65,11 @@ public class assertResponses {
 			System.out.println("Status Code Mismatch");
 			ExtentReporterNG.logFailDetails("Status Code Mismatch : "+"\n Actual Status Code : "+actualStatusCode +"\n Expected Status Code : "+expecteStatusCode);
 		}
+		
+		assertEquals(actualStatusCode, expecteStatusCode);
 	}
 	
-	
+	@Step
 	public static void verifyResponseTime(long actualResponseTime , JSONObject expectedResponseData) {
 		JsonPath jp = new JsonPath(expectedResponseData.toString());
 		int expecteResponseTime = Integer.parseInt(jp.getString("responseTime"));
@@ -77,7 +83,7 @@ public class assertResponses {
 		}
 	}
 	
-	
+	@Step
 	public static void verifyResponseBody(String actualResponseBody , JSONObject expectedResponseData) {
 		
 		HashMap<String, String> expectedResponseBody = new Gson().fromJson(expectedResponseData.get("body").toString(), HashMap.class);

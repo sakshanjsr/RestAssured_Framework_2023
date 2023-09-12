@@ -8,6 +8,7 @@ import org.json.simple.parser.ParseException;
 import org.testng.annotations.Test;
 
 import Data.Login.loginData;
+import io.qameta.allure.Step;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.path.json.JsonPath;
@@ -21,6 +22,7 @@ import utils.getProperties;
 public class Login {
 	
 	@Test
+	@Step
 	public static String playerLogin() throws IOException, ParseException {
 		
 		

@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 import org.json.simple.JSONObject;
 
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.QueryableRequestSpecification;
@@ -14,12 +15,14 @@ import io.restassured.specification.SpecificationQuerier;
 
 public class Rest_Utils {
 	
+	@Step
 	private static RequestSpecification getRequestSpecification(String baseURL, JSONObject payLoad , HashMap<String, String>headers) {
 		return  given()
 				.baseUri(baseURL)
 				.headers(headers)
 				.body(payLoad);
 	}
+	
 	
 	private static void printRequestLogInReport(RequestSpecification requestSpecification) {
 		QueryableRequestSpecification queryableRequestSpecification = SpecificationQuerier.query(requestSpecification);
@@ -31,6 +34,7 @@ public class Rest_Utils {
 		ExtentReporterNG.logInfo(queryableRequestSpecification.getBody());
 	}
 	
+	
 	private static void printResponseLogInReport(Response response) {
 		ExtentReporterNG.logInfoDetails("Response Status Code is : " + response.getStatusCode());
 		ExtentReporterNG.logInfoDetails("Response Headers are : ");
@@ -39,29 +43,30 @@ public class Rest_Utils {
 		ExtentReporterNG.logInfo(response.getBody().prettyPrint());
 	}
 	
-	
+	@Step
 	public static Response performPost (String baseURL, JSONObject payLoad , HashMap<String, String> headers ,String path) {
 		RequestSpecification requestSpecifications = getRequestSpecification( baseURL,  payLoad , headers);
 		Response response = requestSpecifications.post(path);
-		printRequestLogInReport(requestSpecifications);
-		printResponseLogInReport(response);
+		//printRequestLogInReport(requestSpecifications);
+		//printResponseLogInReport(response);
 		return response;
 	}
 	
-	
+	@Step
 	public static Response performGet (String baseURL, JSONObject payLoad , HashMap<String, String> headers ,String path) {
 		RequestSpecification requestSpecifications = getRequestSpecification( baseURL,  payLoad , headers);
 		Response response = requestSpecifications.get(path);
-		printRequestLogInReport(requestSpecifications);
-		printResponseLogInReport(response);
+		//printRequestLogInReport(requestSpecifications);
+		//printResponseLogInReport(response);
 		return response;
 	}
 
+	@Step
 	public static Response performPut (String baseURL, JSONObject payLoad , HashMap<String, String> headers ,String path) {
 		RequestSpecification requestSpecifications = getRequestSpecification( baseURL,  payLoad , headers);
 		Response response = requestSpecifications.put(path);
-		printRequestLogInReport(requestSpecifications);
-		printResponseLogInReport(response);
+		//printRequestLogInReport(requestSpecifications);
+		//printResponseLogInReport(response);
 		return response;
 	}
 

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Aug 08 22:11:32 IST 2023</td>
+<td>Started on:</td><td>Fri Aug 11 19:35:12 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>12 seconds (12746 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7144 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -77,14 +77,50 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Place All Games Wager", "Place Wagers for different games"</td>
-<td></td>
-<td>3</td>
-<td>runners.TestRunner@7bba5817</td></tr>
+<td><div><pre>java.lang.AssertionError: expected [20109] but found [200]
+	at utils.assertResponses.verifyStatusCode(assertResponses.java:62)
+	at Common.Login.playerLogin(Login.java:47)
+	at stepdefs.wagerStepDefinitions.user_is_logged_into_the_application(wagerStepDefinitions.java:24)
+	at ✽.User is logged into the Application(file:///C:/Users/Sanjay%20Prasad/eclipse-workspace/RestAssured_Frame_Final/src/test/resources/Features/Wager.feature:13)
+... Removed 7 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1049882225", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1049882225'><pre>java.lang.AssertionError: expected [20109] but found [200]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1418)
+	at org.testng.Assert.assertEquals(Assert.java:1382)
+	at org.testng.Assert.assertEquals(Assert.java:1428)
+	at utils.assertResponses.verifyStatusCode(assertResponses.java:62)
+	at Common.Login.playerLogin(Login.java:47)
+	at stepdefs.wagerStepDefinitions.user_is_logged_into_the_application(wagerStepDefinitions.java:24)
+	at ✽.User is logged into the Application(file:///C:/Users/Sanjay%20Prasad/eclipse-workspace/RestAssured_Frame_Final/src/test/resources/Features/Wager.feature:13)
+</pre></div></td>
+<td>1</td>
+<td>runners.TestRunner@680d4a6a</td></tr>
 <tr>
 <td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Place All Games Wager", "Place Wagers for different games"</td>
-<td></td>
-<td>8</td>
-<td>runners.TestRunner@7bba5817</td></tr>
+<td><div><pre>java.lang.AssertionError: expected [20109] but found [200]
+	at utils.assertResponses.verifyStatusCode(assertResponses.java:62)
+	at Common.Login.playerLogin(Login.java:47)
+	at stepdefs.wagerStepDefinitions.user_is_logged_into_the_application(wagerStepDefinitions.java:24)
+	at ✽.User is logged into the Application(file:///C:/Users/Sanjay%20Prasad/eclipse-workspace/RestAssured_Frame_Final/src/test/resources/Features/Wager.feature:13)
+... Removed 7 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1191377646", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1191377646'><pre>java.lang.AssertionError: expected [20109] but found [200]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1418)
+	at org.testng.Assert.assertEquals(Assert.java:1382)
+	at org.testng.Assert.assertEquals(Assert.java:1428)
+	at utils.assertResponses.verifyStatusCode(assertResponses.java:62)
+	at Common.Login.playerLogin(Login.java:47)
+	at stepdefs.wagerStepDefinitions.user_is_logged_into_the_application(wagerStepDefinitions.java:24)
+	at ✽.User is logged into the Application(file:///C:/Users/Sanjay%20Prasad/eclipse-workspace/RestAssured_Frame_Final/src/test/resources/Features/Wager.feature:13)
+</pre></div></td>
+<td>4</td>
+<td>runners.TestRunner@680d4a6a</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-08T22:11:32 IST" name="Suite" finished-at="2023-08-08T22:11:45 IST" duration-ms="12746">
+  <suite started-at="2023-09-12T18:44:51 IST" name="Default suite" finished-at="2023-09-12T18:44:57 IST" duration-ms="5804">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@7bba5817]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@1023150a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-08-08T22:11:32 IST" name="Test" finished-at="2023-08-08T22:11:45 IST" duration-ms="12746">
+    <test started-at="2023-09-12T18:44:51 IST" name="Default test" finished-at="2023-09-12T18:44:57 IST" duration-ms="5804">
       <class name="runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@7bba5817]" started-at="2023-08-08T22:11:33 IST" name="setUpClass" finished-at="2023-08-08T22:11:33 IST" duration-ms="552" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@1023150a]" started-at="2023-09-12T18:44:51 IST" name="setUpClass" finished-at="2023-09-12T18:44:52 IST" duration-ms="1158" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3ee68377]]>
+                <![CDATA[org.testng.TestRunner@282831ea]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@7bba5817]" started-at="2023-08-08T22:11:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-08T22:11:41 IST" duration-ms="8063" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@1023150a]" started-at="2023-09-12T18:44:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-09-12T18:44:57 IST" duration-ms="4548" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Place All Games Wager"]]>
+                <![CDATA["Place PICK3 Wager"]]>
               </value>
             </param>
             <param index="1">
@@ -34,30 +34,28 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.aventstack.extentreports.ExtentTest.pass(com.aventstack.extentreports.markuputils.Markup)" because the return value of "java.lang.ThreadLocal.get()" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.pass(com.aventstack.extentreports.markuputils.Markup)" because the return value of "java.lang.ThreadLocal.get()" is null
+at utils.ExtentReporterNG.logPassDetails(ExtentReporterNG.java:45)
+at utils.assertResponses.verifyStatusCode(assertResponses.java:63)
+at Common.Login.playerLogin(Login.java:47)
+at stepdefs.wagerStepDefinitions.user_is_logged_into_the_application(wagerStepDefinitions.java:24)
+at ✽.User is logged into the Application(file:///C:/Users/Sanjay%20Prasad/eclipse-workspace/RestAssured_Frame_Final/src/test/resources/Features/Wager.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@7bba5817]" started-at="2023-08-08T22:11:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-08T22:11:45 IST" duration-ms="3634" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Place All Games Wager"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Place Wagers for different games"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@7bba5817]" started-at="2023-08-08T22:11:45 IST" name="tearDownClass" finished-at="2023-08-08T22:11:45 IST" duration-ms="25" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@1023150a]" started-at="2023-09-12T18:44:57 IST" name="tearDownClass" finished-at="2023-09-12T18:44:57 IST" duration-ms="31" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- runners.TestRunner -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

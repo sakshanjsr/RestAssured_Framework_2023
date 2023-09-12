@@ -1,4 +1,5 @@
-Feature: Place Wagers for different games Allure
+@Wager @Severity=Blocker
+Feature: Place Wagers for different games
 
   @Smoke
   Scenario: Place PICK3 Wager
